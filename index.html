@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ECFFC2;
+            margin: 0;
+        }
+        h1 {
+            font-family: 'Pilseung Gothic', sans-serif;
+            font-size: 64px;
+            font-weight: 400;
+            line-height: 90px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #7C7B6D;
+            margin-top: 0;
+            margin-left: 20px;
+        }
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 40px;
+            color: #DDDDDD;
+            margin-top: 20px;
+            text-align: center; /* 중앙 정렬을 위해 추가 */
+        }
+h3 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 10px;
+            color: #DDDDDD;
+            margin-top: 50px;
+            text-align: center; /* 중앙 정렬을 위해 추가 */
+        }
+         #nemo {
+        cursor: url('가위.png') 10 10, auto;
+    }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="font.css">
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    var furElements = document.querySelectorAll("#fur1, #fur2, #fur3, #fur4, #fur5, #fur6, #fur7, #fur8, #fur9, #fur10, #fur11, #fur12");
+    var larmElement = document.getElementById("larm");
+    var rarmElement = document.getElementById("rarm");
+    var lfootElement = document.getElementById("lfoot");
+    var rfootElement = document.getElementById("rfoot");
+     var tearElement = document.getElementById("tear");
+     var triElement = document.getElementById("tri");
+    var furCount = 0;
+    var isLarmMoved = false;
+    var h3Element = document.querySelector("h3");
+
+tearElement.style.opacity = "0";
+triElement.style.opacity = "0";
+    h3Element.style.opacity = "0";
+
+    furElements.forEach(function(element) {
+        element.addEventListener("mouseenter", handleMouseEnter);
+        element.addEventListener("mouseleave", handleMouseLeave);
+    });
+
+    function handleMouseEnter() {
+        this.remove();
+        furCount++;
+
+        if (furCount === 12 && !isLarmMoved) {
+            moveLArm();
+            moveRArm();
+            moveLFoot();
+            moveRFoot();
+            showH3();
+            showTear();
+            showTri();
+            isLarmMoved = true;
+        }
+    }
+
+    function handleMouseLeave() {
+        furCount--;
+
+        if (furCount === 0 && isLarmMoved) {
+            resetLArm();
+            resetRArm();
+            resetLFoot();
+            resetRFoot();
+            hideH3();
+            hideTear();
+            hideTri();
+        }
+    }
+
+    function moveLArm() {
+        larmElement.style.left = "50%";
+        larmElement.style.marginLeft = "-71px";
+        larmElement.style.top = "558px";
+        larmElement.style.transform = "rotate(69.04deg)";
+    }
+
+    function moveRArm() {
+        rarmElement.style.right = "50%";
+        rarmElement.style.marginLeft = "27px";
+        rarmElement.style.top = "558px";
+        rarmElement.style.transform = "rotate(-69.04deg)";
+    }
+
+    function moveLFoot() {
+        lfootElement.style.left = "50%";
+        lfootElement.style.marginLeft = "-84px";
+        lfootElement.style.top = "732.02px";
+        lfootElement.style.transform = "rotate(0deg)";
+    }
+
+    function moveRFoot() {
+        rfootElement.style.right = "50%";
+        rfootElement.style.marginLeft = "11px";
+        rfootElement.style.top = "732.02px";
+        rfootElement.style.transform = "rotate(0deg)";
+    }
+
+    function resetLArm() {
+        larmElement.style.left = "50%";
+        larmElement.style.marginLeft = "-152px";
+        larmElement.style.top = "565.2px";
+        larmElement.style.transform = "rotate(-135deg)";
+    }
+
+    function resetRArm() {
+        rarmElement.style.left = "50%";
+        rarmElement.style.marginLeft = "107px";
+        rarmElement.style.top = "565.2px";
+        rarmElement.style.transform = "rotate(135deg)";
+    }
+
+    function resetLFoot() {
+        lfootElement.style.left = "50%";
+        lfootElement.style.marginLeft = "-65px";
+        lfootElement.style.top = "732.02px";
+        lfootElement.style.transform = "rotate(0deg)";
+    }
+
+    function resetRFoot() {
+        rfootElement.style.left = "50%";
+        rfootElement.style.marginLeft = "65px";
+        rfootElement.style.top = "732.02px";
+        rfootElement.style.transform = "rotate(0deg)";
+    }
+
+   function showH3() {
+    h3Element.style.opacity = "1";
+    setTimeout(function() {
+        var linkElement1 = document.createElement("a");
+        linkElement1.href = "https://www.youtube.com"; // 첫 번째 주소
+        linkElement1.target = "_blank";
+        linkElement1.textContent = "youtube.com"; // 첫 번째 텍스트
+        linkElement1.style.textAlign = "center";
+
+         var textElement = document.createElement("span");
+        textElement.textContent = "Did you enter the webpage I recommended? ";
+        textElement.style.fontSize = "13px";
+        textElement.style.textAlign = "center";
+
+        var linkElement2 = document.createElement("a");
+        linkElement2.href = "great.html"; // 두 번째 주소
+        linkElement2.target = "_blank";
+        linkElement2.textContent = "then.."; // 두 번째 텍스트
+        linkElement2.style.fontSize = "13px";
+        linkElement2.style.textAlign = "center";
+
+        var brElement1 = document.createElement("br"); // 첫 번째 줄바꿈
+        var brElement2 = document.createElement("br"); // 두 번째 줄바꿈
+        var brElement3 = document.createElement("br");
+
+        h3Element.innerHTML = "";
+        h3Element.appendChild(linkElement1);
+        h3Element.appendChild(brElement1); // 첫 번째 줄 띄어쓰기
+        h3Element.appendChild(brElement2); // 두 번째 줄 띄어쓰기
+        h3Element.appendChild(textElement);
+        h3Element.appendChild(brElement3);
+        h3Element.appendChild(linkElement2);
+    }, 3000);
+}
+
+
+     function hideH3() {
+       h3Element.style.opacity = "0";
+    }
+
+    function showTear() {
+        tearElement.style.opacity = "1";
+    }
+
+    function hideTear(){
+        tearElement.style.opacity = "0";
+    }
+    function showTri() {
+        triElement.style.opacity = "1";
+    }
+
+    function hideTri(){
+        triElement.style.opacity = "0";
+    }
+});
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>PurrfectFauxs</h1>
+    <div id="nemo"></div>
+    <div id="naked"></div>
+    <div id="dotone"></div>
+    <div id="dottwo"></div>
+    <div id="dotthree"></div>
+    <div id="lfoot"></div>
+    <div id="rfoot"></div>
+    <div id="larm"></div>
+    <div id="rarm"></div>
+    <div id="face"></div>
+    <div id="lear"></div>
+    <div id="rear"></div>
+    <div id="leye"></div>
+    <div id="reye"></div>
+    <div id="mouth"></div>
+    <div id="noseone"></div>
+    <div id="nosetwo"></div>
+    <div id="nosethree"></div>
+    <div id="fur1"></div>
+    <div id="fur2"></div>
+    <div id="fur3"></div>
+    <div id="fur4"></div>
+    <div id="fur5"></div>
+    <div id="fur6"></div>
+    <div id="fur7"></div>
+    <div id="fur8"></div>
+    <div id="fur9"></div>
+    <div id="fur10"></div>
+    <div id="fur11"></div>
+    <div id="fur12"></div>
+     <div id="tri"></div>
+     <div id="tear"></div>
+            <h3>Hey..I want to recommend</h3>
+
+    <h2>BaaaaaaaabAAaaaabbbbbbbbbaaabaaaaaaaaaaBBBAAaaaaaaaaabAAAAAAAbaabaaaaaaaaaaaaabAAaaaaabbbaababbbbbaaaaaaaaaaaaaaaaaabaaabaabaabaaaaaaaaAba</h2>
+
+</body>
+</html>
