@@ -28,189 +28,243 @@
             color: #DDDDDD;
             margin-top: 20px;
             text-align: center; /* 중앙 정렬을 위해 추가 */
+            z-index:0;
         }
-h3 {
+        h3 {
             font-family: 'Inter', sans-serif;
             font-weight: 400;
-            font-size: 10px;
+            font-size: 20px;
             color: #DDDDDD;
             margin-top: 50px;
             text-align: center; /* 중앙 정렬을 위해 추가 */
+            z-index:2;
         }
-         #nemo {
-        cursor: url('가위.png') 10 10, auto;
-    }
+
+        h4 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            color: #000000;
+            margin-top: 50px;
+            text-align: center; /* 중앙 정렬을 위해 추가 */
+            z-index:2;
+        }
+        h5 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            color: #000000;
+            text-align: center; /* 중앙 정렬을 위해 추가 */
+            
+        }
+        #nemo {
+            cursor: url('가위.png') 10 10, auto;
+        }
 
     </style>
     <link rel="stylesheet" type="text/css" href="font.css">
     <script>
-document.addEventListener("DOMContentLoaded", function() {
-    var furElements = document.querySelectorAll("#fur1, #fur2, #fur3, #fur4, #fur5, #fur6, #fur7, #fur8, #fur9, #fur10, #fur11, #fur12");
-    var larmElement = document.getElementById("larm");
-    var rarmElement = document.getElementById("rarm");
-    var lfootElement = document.getElementById("lfoot");
-    var rfootElement = document.getElementById("rfoot");
-     var tearElement = document.getElementById("tear");
-     var triElement = document.getElementById("tri");
-    var furCount = 0;
-    var isLarmMoved = false;
-    var h3Element = document.querySelector("h3");
+        document.addEventListener("DOMContentLoaded", function() {
+            var furElements = document.querySelectorAll("#fur1, #fur2, #fur3, #fur4, #fur5, #fur6, #fur7, #fur8, #fur9, #fur10, #fur11, #fur12");
+            var larmElement = document.getElementById("larm");
+            var rarmElement = document.getElementById("rarm");
+            var lfootElement = document.getElementById("lfoot");
+            var rfootElement = document.getElementById("rfoot");
+            var tearElement = document.getElementById("tear");
+            var triElement = document.getElementById("tri");
+            var bubbleElement = document.getElementById("bubble");
+            var bubble2Element = document.getElementById("bubble2");
+            var bubble3Element = document.getElementById("bubble3");
+            var bubble4Element = document.getElementById("bubble4");
+            var furCount = 0;
+            var isLarmMoved = false;
+            var h3Element = document.querySelector("h3");
+            var h4Element = document.querySelector("h4");
+            var h5Element = document.querySelector("h5");
 
-tearElement.style.opacity = "0";
-triElement.style.opacity = "0";
-    h3Element.style.opacity = "0";
+            tearElement.style.opacity = "0";
+            triElement.style.opacity = "0";
+            h3Element.style.opacity = "0";
+            h4Element.style.opacity = "0";
+            h5Element.style.opacity = "0";
+            bubbleElement.style.opacity = "0";
+            bubble2Element.style.opacity = "0";
+            bubble3Element.style.opacity = "0";
+            bubble4Element.style.opacity = "0";
 
-    furElements.forEach(function(element) {
-        element.addEventListener("mouseenter", handleMouseEnter);
-        element.addEventListener("mouseleave", handleMouseLeave);
-    });
+            furElements.forEach(function(element) {
+                element.addEventListener("mouseenter", handleMouseEnter);
+                element.addEventListener("mouseleave", handleMouseLeave);
+            });
 
-    function handleMouseEnter() {
-        this.remove();
-        furCount++;
+            function handleMouseEnter() {
+                this.remove();
+                furCount++;
 
-        if (furCount === 12 && !isLarmMoved) {
-            moveLArm();
-            moveRArm();
-            moveLFoot();
-            moveRFoot();
-            showH3();
-            showTear();
-            showTri();
-            isLarmMoved = true;
-        }
-    }
+                if (furCount === 12 && !isLarmMoved) {
+                    moveLArm();
+                    moveRArm();
+                    moveLFoot();
+                    moveRFoot();
+                    showH3();
+                    showTear();
+                    showTri();
+                    showBubble();
+                    isLarmMoved = true;
+                }
+            }
 
-    function handleMouseLeave() {
-        furCount--;
+            function handleMouseLeave() {
 
-        if (furCount === 0 && isLarmMoved) {
-            resetLArm();
-            resetRArm();
-            resetLFoot();
-            resetRFoot();
-            hideH3();
-            hideTear();
-            hideTri();
-        }
-    }
 
-    function moveLArm() {
-        larmElement.style.left = "50%";
-        larmElement.style.marginLeft = "-71px";
-        larmElement.style.top = "558px";
-        larmElement.style.transform = "rotate(69.04deg)";
-    }
+                if (furCount === 0 && isLarmMoved) {
+                    resetLArm();
+                    resetRArm();
+                    resetLFoot();
+                    resetRFoot();
+                    hideH3();
+                    hideH4();
+                    hideH5();
+                    hideTear();
+                    hideTri();
+                    hideBubble();
+                    hideBubble2();
+                }
+            }
 
-    function moveRArm() {
-        rarmElement.style.right = "50%";
-        rarmElement.style.marginLeft = "27px";
-        rarmElement.style.top = "558px";
-        rarmElement.style.transform = "rotate(-69.04deg)";
-    }
+            function moveLArm() {
+                larmElement.style.left = "50%";
+                larmElement.style.marginLeft = "-71px";
+                larmElement.style.top = "558px";
+                larmElement.style.transform = "rotate(69.04deg)";
+            }
 
-    function moveLFoot() {
-        lfootElement.style.left = "50%";
-        lfootElement.style.marginLeft = "-84px";
-        lfootElement.style.top = "732.02px";
-        lfootElement.style.transform = "rotate(0deg)";
-    }
+            function moveRArm() {
+                rarmElement.style.right = "50%";
+                rarmElement.style.marginLeft = "27px";
+                rarmElement.style.top = "558px";
+                rarmElement.style.transform = "rotate(-69.04deg)";
+            }
 
-    function moveRFoot() {
-        rfootElement.style.right = "50%";
-        rfootElement.style.marginLeft = "11px";
-        rfootElement.style.top = "732.02px";
-        rfootElement.style.transform = "rotate(0deg)";
-    }
+            function moveLFoot() {
+                lfootElement.style.left = "50%";
+                lfootElement.style.marginLeft = "-84px";
+                lfootElement.style.top = "732.02px";
+                lfootElement.style.transform = "rotate(0deg)";
+            }
 
-    function resetLArm() {
-        larmElement.style.left = "50%";
-        larmElement.style.marginLeft = "-152px";
-        larmElement.style.top = "565.2px";
-        larmElement.style.transform = "rotate(-135deg)";
-    }
+            function moveRFoot() {
+                rfootElement.style.right = "50%";
+                rfootElement.style.marginLeft = "11px";
+                rfootElement.style.top = "732.02px";
+                rfootElement.style.transform = "rotate(0deg)";
+            }
 
-    function resetRArm() {
-        rarmElement.style.left = "50%";
-        rarmElement.style.marginLeft = "107px";
-        rarmElement.style.top = "565.2px";
-        rarmElement.style.transform = "rotate(135deg)";
-    }
+            function resetLArm() {
+                larmElement.style.left = "50%";
+                larmElement.style.marginLeft = "-152px";
+                larmElement.style.top = "565.2px";
+                larmElement.style.transform = "rotate(-135deg)";
+            }
 
-    function resetLFoot() {
-        lfootElement.style.left = "50%";
-        lfootElement.style.marginLeft = "-65px";
-        lfootElement.style.top = "732.02px";
-        lfootElement.style.transform = "rotate(0deg)";
-    }
+            function resetRArm() {
+                rarmElement.style.left = "50%";
+                rarmElement.style.marginLeft = "107px";
+                rarmElement.style.top = "565.2px";
+                rarmElement.style.transform = "rotate(135deg)";
+            }
 
-    function resetRFoot() {
-        rfootElement.style.left = "50%";
-        rfootElement.style.marginLeft = "65px";
-        rfootElement.style.top = "732.02px";
-        rfootElement.style.transform = "rotate(0deg)";
-    }
+            function resetLFoot() {
+                lfootElement.style.left = "50%";
+                lfootElement.style.marginLeft = "-65px";
+                lfootElement.style.top = "732.02px";
+                lfootElement.style.transform = "rotate(0deg)";
+            }
 
-   function showH3() {
-    h3Element.style.opacity = "1";
-    setTimeout(function() {
-        var linkElement1 = document.createElement("a");
+            function resetRFoot() {
+                rfootElement.style.left = "50%";
+                rfootElement.style.marginLeft = "65px";
+                rfootElement.style.top = "732.02px";
+                rfootElement.style.transform = "rotate(0deg)";
+            }
+
+            function showH3() {
+                h3Element.style.opacity = "1";
+                setTimeout(function() {
+                    var linkElement1 = document.createElement("a");
         linkElement1.href = "https://www.youtube.com"; // 첫 번째 주소
         linkElement1.target = "_blank";
         linkElement1.textContent = "youtube.com"; // 첫 번째 텍스트
         linkElement1.style.textAlign = "center";
+        showBubble2();
+        h4Element.style.opacity = "1";
+        h5Element.style.opacity = "1";
+        showBubble3();
+        showBubble4();
 
-         var textElement = document.createElement("span");
-        textElement.textContent = "Did you enter the webpage I recommended? ";
-        textElement.style.fontSize = "13px";
-        textElement.style.textAlign = "center";
-
-        var linkElement2 = document.createElement("a");
-        linkElement2.href = "great.html"; // 두 번째 주소
-        linkElement2.target = "_blank";
-        linkElement2.textContent = "then.."; // 두 번째 텍스트
-        linkElement2.style.fontSize = "13px";
-        linkElement2.style.textAlign = "center";
-
-        var brElement1 = document.createElement("br"); // 첫 번째 줄바꿈
-        var brElement2 = document.createElement("br"); // 두 번째 줄바꿈
-        var brElement3 = document.createElement("br");
+        
 
         h3Element.innerHTML = "";
         h3Element.appendChild(linkElement1);
-        h3Element.appendChild(brElement1); // 첫 번째 줄 띄어쓰기
-        h3Element.appendChild(brElement2); // 두 번째 줄 띄어쓰기
-        h3Element.appendChild(textElement);
-        h3Element.appendChild(brElement3);
-        h3Element.appendChild(linkElement2);
+
     }, 3000);
-}
+            }
 
 
-     function hideH3() {
-       h3Element.style.opacity = "0";
-    }
+            function hideH3() {
+             h3Element.style.opacity = "0";
+         }
 
-    function showTear() {
-        tearElement.style.opacity = "1";
-    }
+         function hideH4() {
+             h4Element.style.opacity = "0";
+         }
 
-    function hideTear(){
-        tearElement.style.opacity = "0";
-    }
-    function showTri() {
-        triElement.style.opacity = "1";
-    }
+         function showTear() {
+            tearElement.style.opacity = "1";
+        }
+        function hideTear() {
+            tearElement.style.opacity = "0";
+        }
 
-    function hideTri(){
-        triElement.style.opacity = "0";
-    }
-});
+        function showTri() {
+            triElement.style.opacity = "1";
+        }
+        function hideTri() {
+            triElement.style.opacity = "0";
+        }
+
+        function showBubble() {
+            bubbleElement.style.opacity = "1";
+        }
+        function hideBubble() {
+            bubbleElement.style.opacity = "0";
+        }
+            function showBubble2() {
+                bubble2Element.style.opacity = "1";
+            }
+            function hideBubble2() {
+                bubble2Element.style.opacity = "0";
+            }
+
+            function showBubble3() {
+                bubble3Element.style.opacity = "1";
+            }
+            function hideBubble3() {
+                bubble3Element.style.opacity = "0";
+            }
+
+            function showBubble4() {
+                bubble4Element.style.opacity = "1";
+            }
+            function hideBubble4() {
+                bubble4Element.style.opacity = "0";
+            }
+        });
 
 
 
 
-    </script>
+</script>
 </head>
 <body>
     <h1>PurrfectFauxs</h1>
@@ -244,11 +298,22 @@ triElement.style.opacity = "0";
     <div id="fur10"></div>
     <div id="fur11"></div>
     <div id="fur12"></div>
-     <div id="tri"></div>
-     <div id="tear"></div>
-            <h3>Hey..I want to recommend</h3>
+    <div id="tri"></div>
+    <div id="tear"></div>
+    <div id="bubble"></div>
+    <div id="bubble2"></div>
+    <div id="bubble3"></div>
+    <div id="bubble4"></div>
 
-    <h2>BaaaaaaaabAAaaaabbbbbbbbbaaabaaaaaaaaaaBBBAAaaaaaaaaabAAAAAAAbaabaaaaaaaaaaaaabAAaaaaabbbaababbbbbaaaaaaaaaaaaaaaaaabaaabaabaabaaaaaaaaAba</h2>
+    <h4 id="h4Element" style="opacity: 0;">or<br>
+        <a href="https://www.slowdesign.co.kr/goods/goods_view.php?goodsNo=1000005713" target="_blank">here!</a></h4>
+        <h3>Hey..<br>&nbsp;&nbsp;&nbsp;&nbsp;
+        I want to recommend</h3>
+        <h5>Did you enter the webpage<br>
+           I recommended?<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="great.html">then..</a>
+       </h5>
+       <h2>BaaaaaaaabAAaaaabbbbbbbbbaaabaaaaaaaaaaBBBAAaaaaaaaaabAAAAAAAbaabaaaaaaaaaaaaabAAaaaaabbbaababbbbbaaaaaaaaaaaaaaaaaabaaabaabaabaaaaaaaaAba</h2>
 
-</body>
-</html>
+   </body>
+   </html>
