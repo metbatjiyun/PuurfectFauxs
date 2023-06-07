@@ -9,6 +9,18 @@ body {
     font-family: 'Pilseung Gothic', sans-serif;
     /* 기타 스타일 속성들 */
 }
+h2 {
+    position:absolute;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: #DDDDDD;
+    top:50%;
+    left:0%;
+    margin-top: 200px;
+    text-align: center;
+    z-index: 0; 
+}
 #nemo{
     position: absolute;
     width: 343px;
@@ -17,8 +29,8 @@ body {
     top: 508px;
     transform: translateX(-50%);
     background: #ECFFC2;
-    z-index: 3; 
-    opacity: 0;
+    z-index: 0; 
+    opacity: 1;
 }
 #naked{
     position: absolute;
@@ -29,7 +41,7 @@ body {
     top: 517px;
     transform: translateX(-50%);
     background: #FFFDEF;
-    z-index: 0;
+    z-index: 1;
 }
 #dotone{
     position: absolute;
@@ -41,7 +53,7 @@ body {
     top: 691.24px;
     transform: translateX(-50%);
     background: #F1EEDE;
-    z-index: 0;
+    z-index: 1;
 }
 #dottwo{
     position: absolute;
@@ -53,7 +65,7 @@ body {
     top: 668.52px;
     transform: translateX(-50%);
     background: #F1EEDE;
-    z-index: 0;
+    z-index: 1;
 }
 #dotthree{
     position: absolute;
@@ -65,7 +77,7 @@ body {
     top: 681.14px;
     transform: translateX(-50%);
     background: #F1EEDE;
-    z-index: 0;
+    z-index: 1;
 }
 #lfoot{
     position: absolute;
@@ -77,7 +89,7 @@ body {
     top: 732.02px;
     transform: translateX(-50%);
     background: linear-gradient(0deg, #939181 0.03%, #FFFDEF 49.38%);
-    z-index: 0;
+    z-index: 1;
 }
 #rfoot{
     position: absolute;
@@ -89,7 +101,7 @@ body {
     top: 732.02px;
     transform: translateX(-50%);
     background: linear-gradient(0deg, #939181 0.03%, #FFFDEF 49.38%);
-    z-index: 0;
+    z-index: 1;
 }
 
 #larm{
@@ -103,7 +115,7 @@ body {
     transform: translateX(-50%);
     background: linear-gradient(180deg, #939181 0%, #FFFDEF 46.35%, #FFFDEF 46.35%);
     transform: rotate(-135deg);
-    z-index: 0;
+    z-index: 1;
 }
 #rarm{
     position: absolute;
@@ -116,7 +128,7 @@ body {
     transform: translateX(-50%);
     background: linear-gradient(180deg, #939181 0%, #FFFDEF 46.35%, #FFFDEF 46.35%);
     transform: rotate(135deg);
-    z-index: 0;
+    z-index: 1;
 }
 #face {
     position: absolute;
@@ -127,7 +139,7 @@ body {
     top: 328.02px;
     transform: translateX(-50%);
     background: #FFFDEF;
-    z-index: 1;
+    z-index: 2;
 }
 #lear{
     position: absolute;
@@ -140,7 +152,7 @@ body {
     transform: translateX(-50%);
     background: linear-gradient(271.33deg, #939181 51.13%, #FFFDEF 154.92%);
     transform: rotate(28.51deg);
-    z-index: 2;
+    z-index: 3;
 }
 #rear{
     position: absolute;
@@ -153,7 +165,7 @@ body {
     border-radius: 50%;
     background: linear-gradient(271.33deg, #939181 51.13%, #FFFDEF 154.92%);
     transform: rotate(145.14deg);
-    z-index: 2;
+    z-index: 3;
 }
 #leye{
     position: absolute;
@@ -165,7 +177,7 @@ body {
     margin-left: -55px;
     transform: translateX(-50%);
     background: #000000;
-    z-index: 2;
+    z-index: 3;
 }
 #reye{
     position: absolute;
@@ -188,7 +200,7 @@ body {
     top: 433.02px;
     transform: translateX(-50%);
     background: radial-gradient(50% 50% at 50% 50%, #939181 0%, rgba(147, 145, 129, 0.54) 60.94%, rgba(147, 145, 129, 0) 100%);
-    z-index: 2;
+    z-index: 3;
 }
 #noseone{
     position: absolute;
@@ -199,7 +211,7 @@ body {
     top: 457.33px;
     border: 1px solid #000000;
     transform: rotate(45deg);
-    z-index: 3;
+    z-index: 4;
 }
 #nosetwo{
     position: absolute;
@@ -210,7 +222,7 @@ body {
     top: 457.33px;
     border: 1px solid #000000;
     transform: rotate(135deg);
-    z-index: 3;
+    z-index: 4;
 }
 #nosethree{
     position: absolute;
@@ -221,7 +233,7 @@ body {
     top: 480.02px;
     border: 1px solid #000000;
     transform: rotate(90deg);
-    z-index: 3;
+    z-index: 4;
 }
 #fur1{
     position: absolute;
@@ -233,7 +245,7 @@ body {
     top: 624px;
     transform: translateX(-50%);
     background: radial-gradient(88.89% 69.44% at 50% 30.56%, #939181 0%, #939181 59.41%, #6B6B6B 100%);
-    z-index: 3;
+    z-index: 4;
     opacity: 1;
 }
 #fur2{
@@ -246,7 +258,7 @@ body {
     top: 514px;
     transform: translateX(-50%);
     background: radial-gradient(88.89% 69.44% at 50% 30.56%, #939181 0%, #939181 59.41%, #6B6B6B 100%);
-    z-index: 3;
+    z-index: 4;
     opacity: 1;
 }
 #fur3{
@@ -259,7 +271,7 @@ body {
     top: 525px;
     transform: translateX(-50%);
     background: radial-gradient(88.89% 69.44% at 50% 30.56%, #939181 0%, #939181 59.41%, #6B6B6B 100%);
-    z-index: 3;
+    z-index: 4;
     opacity: 1;
 }
 #fur4{
@@ -272,7 +284,7 @@ body {
     top: 516px;
     transform: translateX(-50%);
     background: radial-gradient(88.89% 69.44% at 50% 30.56%, #939181 0%, #939181 59.41%, #6B6B6B 100%);
-    z-index: 3;
+    z-index: 4;
     opacity: 1;
 }
 #fur5{
@@ -285,7 +297,7 @@ body {
     top: 550px;
     transform: translateX(-50%);
     background: radial-gradient(88.89% 69.44% at 50% 30.56%, #939181 0%, #939181 59.41%, #6B6B6B 100%);
-    z-index: 3;
+    z-index: 4;
     opacity: 1;
 }
 #fur6{
@@ -298,7 +310,7 @@ body {
     top: 566px;
     transform: translateX(-50%);
     background: radial-gradient(88.89% 69.44% at 50% 30.56%, #939181 0%, #939181 59.41%, #6B6B6B 100%);
-    z-index: 3;
+    z-index: 4;
     opacity: 1;
 }
 #fur7{
@@ -311,7 +323,7 @@ body {
     top: 622px;
     transform: translateX(-50%);
     background: radial-gradient(88.89% 69.44% at 50% 30.56%, #939181 0%, #939181 59.41%, #6B6B6B 100%);
-    z-index: 3;
+    z-index: 4;
     opacity: 1;
 }
 #fur8{
@@ -323,7 +335,7 @@ body {
     top: 652px;
     transform: translateX(-50%);
     background: radial-gradient(88.89% 69.44% at 50% 30.56%, #939181 0%, #939181 59.41%, #6B6B6B 100%);
-    z-index: 3;
+    z-index: 4;
     opacity: 1;
 }
 #fur9{
@@ -336,7 +348,7 @@ body {
     top: 627px;
     transform: translateX(-50%);
     background: radial-gradient(88.89% 69.44% at 50% 30.56%, #939181 0%, #939181 59.41%, #6B6B6B 100%);
-    z-index: 3;
+    z-index: 4;
     opacity: 1;
 }
 #fur10{
@@ -349,7 +361,7 @@ body {
     top: 548px;
     transform: translateX(-50%);
     background: radial-gradient(88.89% 69.44% at 50% 30.56%, #939181 0%, #939181 59.41%, #6B6B6B 100%);
-    z-index: 3;
+    z-index: 4;
     opacity: 1;
 }
 #fur11{
@@ -362,7 +374,7 @@ body {
     top: 548px;
     transform: translateX(-50%);
     background: radial-gradient(88.89% 69.44% at 50% 30.56%, #939181 0%, #939181 59.41%, #6B6B6B 100%);
-    z-index: 3;
+    z-index: 4;
     opacity: 1;
 }
 #fur12{
@@ -375,7 +387,7 @@ body {
     top: 551px;
     transform: translateX(-50%);
     background: radial-gradient(88.89% 69.44% at 50% 30.56%, #939181 0%, #939181 59.41%, #6B6B6B 100%);
-    z-index: 3;
+    z-index: 4;
     opacity: 1;
 }
 #tri {
@@ -389,7 +401,7 @@ body {
     border-right: 10px solid transparent;
     border-bottom: 20px solid;
     color: #b1dbff;
-    z-index: 3;
+    z-index: 4;
 }
 #tear{
 position: absolute;
@@ -401,8 +413,60 @@ position: absolute;
     top: 464px;
     transform: translateX(-50%);
     background: #b1dbff;
-    z-index: 3;
+    z-index: 4;
 }
+
+#bubble{
+ position: relative;
+  width: 239px;
+  height: 169px;
+  border-radius: 50%;
+  left:50%;
+  margin-left:189px;
+   margin-top: 55px;
+  background: #ffffff;
+  z-index: 2;
+}
+
+#bubble2{
+ position: absolute;
+  width: 142px;
+  height: 100px;
+  border-radius: 50%;
+  top:50%;
+    left:50%;
+    margin-top: 47px;
+  margin-left:-409px;
+  background: #ffffff;
+  z-index: 2;
+}
+
+#bubble3{
+ position: absolute;
+  width: 280px;
+    height: 152px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin-top: 81px;
+    margin-left: 367px;
+  background: #ffffff;
+  z-index: 2;
+}
+#bubble4{
+ position: absolute;
+  width: 100px;
+  height:60px;
+  border-radius: 50%;
+  top:50%;
+    left:50%;
+    margin-top: 177px;
+    margin-left: 547px;
+  background: #ffffff;
+  z-index: 2;
+}
+
+
 #button{
  position: fixed;
   width: 100px;
@@ -434,22 +498,44 @@ position: absolute;
   z-index: 3;
 }
 h3 {
+    position: relative;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 20px;
     color: #000000;
-    margin-top: 50px;
-    text-align: right;
-    margin-right: 150px;
-    z-index: 1; 
+    margin-top: -95px;
+    text-align: center;
+    margin-left: 602px;
+    z-index: 2; 
     opacity: 1;
 }
-h2 {
+
+h4 {
+    position: absolute;
     font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    font-size: 40px;
-    color: #DDDDDD;
-    margin-top: 462px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+     top:50%;
+    left:50%;
+    margin-top: 70px;
     text-align: center;
-    z-index: 0; 
+    margin-left: -362px;
+    z-index: 2; 
+    opacity: 1;
 }
+h5 {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+    top:50%;
+    left:50%;
+    margin-top: 139px;
+    text-align: center;
+    margin-left: 380px;
+    z-index: 2; 
+    opacity: 1;
+}
+
