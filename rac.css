@@ -138,20 +138,19 @@ h2 {
     left: 50%;
     top: 328.02px;
     transform: translateX(-50%);
-    background: #FFFDEF;
+    background: #CBBEAB;
     z-index: 2;
 }
 #lear{
     position: absolute;
-    width: 81.34px;
-    height: 43.06px;
-    left: 50%;
-    border-radius: 50%;
-    top: 323.34px;
-    margin-left: -159px;
-    transform: translateX(-50%);
-    background: linear-gradient(271.33deg, #939181 51.13%, #FFFDEF 154.92%);
-    transform: rotate(28.51deg);
+    width: 0px;
+height: 0px;
+    border-radius: 23%;
+    border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px;
+    background: linear-gradient(93.69deg, #6A6A6A 24.27%, #888884 45.42%, #CBBEAB 73.2%);
+    transform: rotate(-35.04deg);
     z-index: 3;
 }
 #rear{

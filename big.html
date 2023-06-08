@@ -62,10 +62,10 @@
         }
 
     </style>
-    <link rel="stylesheet" type="text/css" href="font.css">
+    <link rel="stylesheet" type="text/css" href="big.css">
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var furElements = document.querySelectorAll("#fur1, #fur2, #fur3, #fur4, #fur5, #fur6, #fur7, #fur8, #fur9, #fur10, #fur11, #fur12");
+            var furElements = document.querySelectorAll("#fur1, #fur2, #fur3, #fur4, #fur5, #fur6, #fur7, #fur8, #fur9, #fur10, #fur11, #fur12, #fur13, #fur14, #fur15, #fur16, #fur17, #fur18, #fur19, #fur20, #fur21, #fur22, #fur23, #fur24, #fur25, #fur26, #fur27, #fur28, #fur29, #fur30");
             var larmElement = document.getElementById("larm");
             var rarmElement = document.getElementById("rarm");
             var lfootElement = document.getElementById("lfoot");
@@ -74,8 +74,12 @@
             var triElement = document.getElementById("tri");
             var bubbleElement = document.getElementById("bubble");
             var bubble2Element = document.getElementById("bubble2");
+             var bubble2tElement = document.getElementById("bubble2t");
+              var bubble2wElement = document.getElementById("bubble2w");
             var bubble3Element = document.getElementById("bubble3");
             var bubble4Element = document.getElementById("bubble4");
+            var coat1Element = document.getElementById("coat1");
+            var coat2Element = document.getElementById("coat2");
             var furCount = 0;
             var isLarmMoved = false;
             var h3Element = document.querySelector("h3");
@@ -89,8 +93,12 @@
             h5Element.style.opacity = "0";
             bubbleElement.style.opacity = "0";
             bubble2Element.style.opacity = "0";
+            bubble2tElement.style.opacity = "0";
+            bubble2wElement.style.opacity = "0";
             bubble3Element.style.opacity = "0";
             bubble4Element.style.opacity = "0";
+            coat1Element.style.opacity = "0";
+            coat2Element.style.opacity = "0";
 
             furElements.forEach(function(element) {
                 element.addEventListener("mouseenter", handleMouseEnter);
@@ -101,7 +109,7 @@
                 this.remove();
                 furCount++;
 
-                if (furCount === 12 && !isLarmMoved) {
+                if (furCount === 30 && !isLarmMoved) {
                     moveLArm();
                     moveRArm();
                     moveLFoot();
@@ -129,62 +137,66 @@
                     hideTri();
                     hideBubble();
                     hideBubble2();
+                    hideBubble2t();
+                    hideBubble2w();
+                    hideCoat1();
+                    hideCoat2();
                 }
             }
 
             function moveLArm() {
                 larmElement.style.left = "50%";
                 larmElement.style.marginLeft = "-71px";
-                larmElement.style.top = "558px";
+                larmElement.style.top = "343px";
                 larmElement.style.transform = "rotate(69.04deg)";
             }
 
             function moveRArm() {
                 rarmElement.style.right = "50%";
                 rarmElement.style.marginLeft = "27px";
-                rarmElement.style.top = "558px";
+                rarmElement.style.top = "343px";
                 rarmElement.style.transform = "rotate(-69.04deg)";
             }
 
             function moveLFoot() {
                 lfootElement.style.left = "50%";
                 lfootElement.style.marginLeft = "-84px";
-                lfootElement.style.top = "732.02px";
+                lfootElement.style.top = "517.02px";
                 lfootElement.style.transform = "rotate(0deg)";
             }
 
             function moveRFoot() {
                 rfootElement.style.right = "50%";
                 rfootElement.style.marginLeft = "11px";
-                rfootElement.style.top = "732.02px";
+                rfootElement.style.top = "517.02px";
                 rfootElement.style.transform = "rotate(0deg)";
             }
 
             function resetLArm() {
                 larmElement.style.left = "50%";
                 larmElement.style.marginLeft = "-152px";
-                larmElement.style.top = "565.2px";
+                larmElement.style.top = "350.2px";
                 larmElement.style.transform = "rotate(-135deg)";
             }
 
             function resetRArm() {
                 rarmElement.style.left = "50%";
                 rarmElement.style.marginLeft = "107px";
-                rarmElement.style.top = "565.2px";
+                rarmElement.style.top = "350.2px";
                 rarmElement.style.transform = "rotate(135deg)";
             }
 
             function resetLFoot() {
                 lfootElement.style.left = "50%";
                 lfootElement.style.marginLeft = "-65px";
-                lfootElement.style.top = "732.02px";
+                lfootElement.style.top = "517.02px";
                 lfootElement.style.transform = "rotate(0deg)";
             }
 
             function resetRFoot() {
                 rfootElement.style.left = "50%";
                 rfootElement.style.marginLeft = "65px";
-                rfootElement.style.top = "732.02px";
+                rfootElement.style.top = "517.02px";
                 rfootElement.style.transform = "rotate(0deg)";
             }
 
@@ -192,23 +204,17 @@
                 h3Element.style.opacity = "1";
                 setTimeout(function() {
                     var linkElement1 = document.createElement("a");
-       var urlList = [
-      "https://kr.vestiairecollective.com/women-clothing/coats/chanel/multicolour-faux-fur-chanel-coat-28597042.shtml",
-      "https://www.nordstrom.com/s/oversize-faux-fur-reversible-bomber-jacket/7034554?origin=category-personalizedsort&breadcrumb=Home%2FWomen%2FClothing%2FCoats%20%26%20Jackets%2FFur%20%26%20Faux%20Fur&color=240",
-      "https://www.asos.com/urban-bliss/urban-bliss-faux-fur-bomber-jacket-in-black-heart/prd/203260028?colourWayId=203260031&cid=11900"
-      // 다른 주소를 원하는 만큼 추가할 수 있습니다
-    ];
-        var randomIndex = Math.floor(Math.random() * urlList.length);
-    var randomUrl = urlList[randomIndex];
-    linkElement1.href = randomUrl;
-    linkElement1.target = "_blank";
-    linkElement1.textContent = "Here"; // 원하는 텍스트
-    linkElement1.style.textAlign = "center";
+        linkElement1.innerHTML = "Hi!<br> This web page recommends<br> sites that<br> sell fake fur."; // 첫 번째 텍스트
+        linkElement1.style.textAlign = "center";
         showBubble2();
+        showBubble2t();
+        showBubble2w();
         h4Element.style.opacity = "1";
         h5Element.style.opacity = "1";
         showBubble3();
         showBubble4();
+        showCoat1();
+        showCoat2();
 
         
 
@@ -253,7 +259,18 @@
             function hideBubble2() {
                 bubble2Element.style.opacity = "0";
             }
-
+function showBubble2t() {
+                bubble2tElement.style.opacity = "1";
+            }
+            function hideBubble2t() {
+                bubble2tElement.style.opacity = "0";
+            }
+            function showBubble2w() {
+                bubble2wElement.style.opacity = "1";
+            }
+            function hideBubble2w() {
+                bubble2wElement.style.opacity = "0";
+            }
             function showBubble3() {
                 bubble3Element.style.opacity = "1";
             }
@@ -266,6 +283,19 @@
             }
             function hideBubble4() {
                 bubble4Element.style.opacity = "0";
+            }
+
+            function showCoat1() {
+                coat1Element.style.opacity = "1";
+            }
+            function hideCoat1() {
+                coat1Element.style.opacity = "0";
+            }
+            function showCoat2() {
+                coat2Element.style.opacity = "1";
+            }
+            function hideCoat2() {
+                coat2Element.style.opacity = "0";
             }
         });
 
@@ -306,20 +336,40 @@
     <div id="fur10"></div>
     <div id="fur11"></div>
     <div id="fur12"></div>
+    <div id="fur13"></div>
+    <div id="fur14"></div>
+    <div id="fur15"></div>
+    <div id="fur16"></div>
+    <div id="fur17"></div>
+    <div id="fur18"></div>
+    <div id="fur19"></div>
+    <div id="fur20"></div>
+    <div id="fur21"></div>
+<div id="fur22"></div>
+<div id="fur23"></div>
+<div id="fur24"></div>
+<div id="fur25"></div>
+<div id="fur26"></div>
+<div id="fur27"></div>
+<div id="fur28"></div>
+<div id="fur29"></div>
+    <div id="fur30"></div>
     <div id="tri"></div>
     <div id="tear"></div>
     <div id="bubble"></div>
     <div id="bubble2"></div>
+    <div id="bubble2t"></div>
+    <div id="bubble2w"></div>
     <div id="bubble3"></div>
     <div id="bubble4"></div>
+    <div id="coat1"></div>
+    <div id="coat2"></div>
 
-    <h4 id="h4Element" style="opacity: 0;">or<br>
-        <a href="https://www.slowdesign.co.kr/goods/goods_view.php?goodsNo=1000005713" target="_blank">here!</a></h4>
-        <h3>Hey..<br>&nbsp;&nbsp;&nbsp;&nbsp;
-        I want to recommend</h3>
-        <h5>Did you enter the webpage<br>
-           I recommended?<br>
-            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="great.html">then..</a>
+    <h4 id="h4Element" style="opacity: 0;">I made this page<br> as part of the <br>No Fur campaign,<br> but I'm not forcing you<br> not to buy animal fur.<br> Just wanted to <br>let you know that<br> there are animals<br> in the fabric market<br> that are severely shaved,<br> and there are fake fur<br> that can<br> replace animal fur.</h4>
+        <h3>Oh</h3>
+        <h5>If you want <br>
+           to go back<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="great.html">then..</a>
        </h5>
        <h2>BaaaaaaaabAAaaaabbbbbbbbbaaabaaaaaaaaaaBBBAAaaaaaaaaabAAAAAAAbaabaaaaaaaaaaaaabAAaaaaabbbaababbbbbaaaaaaaaaaaaaaaaaabaaabaabaabaaaaaaaaAba</h2>
 
