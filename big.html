@@ -80,6 +80,9 @@
             var bubble4Element = document.getElementById("bubble4");
             var coat1Element = document.getElementById("coat1");
             var coat2Element = document.getElementById("coat2");
+             var coat3Element = document.getElementById("coat3");
+             var coat4Element = document.getElementById("coat4");
+              var coat5Element = document.getElementById("coat5");
             var furCount = 0;
             var isLarmMoved = false;
             var h3Element = document.querySelector("h3");
@@ -99,6 +102,9 @@
             bubble4Element.style.opacity = "0";
             coat1Element.style.opacity = "0";
             coat2Element.style.opacity = "0";
+            coat3Element.style.opacity = "0";
+            coat4Element.style.opacity = "0";
+            coat5Element.style.opacity = "0";
 
             furElements.forEach(function(element) {
                 element.addEventListener("mouseenter", handleMouseEnter);
@@ -141,6 +147,10 @@
                     hideBubble2w();
                     hideCoat1();
                     hideCoat2();
+                    hideCoat3();
+                    hideCoat4();
+                    hideCoat5();
+
                 }
             }
 
@@ -215,6 +225,9 @@
         showBubble4();
         showCoat1();
         showCoat2();
+        showCoat3();
+        showCoat4();
+        showCoat5();
 
         
 
@@ -297,6 +310,25 @@ function showBubble2t() {
             function hideCoat2() {
                 coat2Element.style.opacity = "0";
             }
+            function showCoat3() {
+                coat3Element.style.opacity = "1";
+            }
+            function hideCoat3() {
+                coat3Element.style.opacity = "0";
+            }
+
+            function showCoat4() {
+                coat4Element.style.opacity = "1";
+            }
+            function hideCoat4() {
+                coat4Element.style.opacity = "0";
+            }
+             function showCoat5() {
+                coat5Element.style.opacity = "1";
+            }
+            function hideCoat5() {
+                coat5Element.style.opacity = "0";
+            }
         });
 
 
@@ -364,6 +396,9 @@ function showBubble2t() {
     <div id="bubble4"></div>
     <div id="coat1"></div>
     <div id="coat2"></div>
+    <div id="coat3"></div>
+     <div id="coat4"></div>
+      <div id="coat5"></div>
 
     <h4 id="h4Element" style="opacity: 0;">I made this page<br> as part of the <br>No Fur campaign,<br> but I'm not forcing you<br> not to buy animal fur.<br> Just wanted to <br>let you know that<br> there are animals<br> in the fabric market<br> that are severely shaved,<br> and there are fake fur<br> that can<br> replace animal fur.</h4>
         <h3>Oh</h3>
