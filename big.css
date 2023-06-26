@@ -11,7 +11,7 @@ body {
 }
 h2 {
     position:absolute;
-    font-family: 'Inter', sans-serif;
+   font-family: 'Rubik Puddles', cursive;
     font-weight: 300;
     font-size: 40px;
     color: #DDDDDD;
@@ -914,34 +914,34 @@ margin-left: -255px;
 
 h3 {
     position: relative;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-size: 20px;
     color: #000000;
-    margin-top: -125px;
+    margin-top: -117px;
     text-align: center;
-    margin-left: 649px;
+    margin-left: 652px;
     z-index: 2; 
     opacity: 1;
 }
 
 h4 {
     position: absolute;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-size: 20px;
     color: #000000;
      top:50%;
     left:50%;
-   margin-top: -147px;
+    margin-top: -126px;
     text-align: center;
-    margin-left: -464px;
+    margin-left: -446px;
     z-index: 2; 
     opacity: 1;
 }
 h5 {
     position: absolute;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-size: 20px;
     color: #000000;

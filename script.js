@@ -31,7 +31,7 @@ button2.addEventListener("mouseleave", function() {
 });
 
 button2.addEventListener("click", function() {
-    window.location.href = "big.html";
+    window.location.href = "racoon.html";
 });
 
 

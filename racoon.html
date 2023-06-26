@@ -5,6 +5,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #ECFFC2;
@@ -22,7 +24,7 @@
             margin-left: 20px;
         }
         h2 {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Rubik Puddles', cursive;
             font-weight: 300;
             font-size: 40px;
             color: #DDDDDD;
@@ -31,7 +33,7 @@
             z-index:0;
         }
         h3 {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Rubik', sans-serif;
             font-weight: 400;
             font-size: 20px;
             color: #DDDDDD;
@@ -41,7 +43,7 @@
         }
 
         h4 {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Rubik', sans-serif;
             font-weight: 400;
             font-size: 20px;
             color: #000000;
@@ -50,7 +52,7 @@
             z-index:2;
         }
         h5 {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Rubik', sans-serif;
             font-weight: 400;
             font-size: 20px;
             color: #000000;
@@ -63,9 +65,11 @@
 
     </style>
     <link rel="stylesheet" type="text/css" href="rac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="random.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var furElements = document.querySelectorAll("#fur1, #fur2, #fur3, #fur4, #fur5, #fur6, #fur7, #fur8, #fur9, #fur10, #fur11, #fur12");
+            var furElements = document.querySelectorAll("#fur1, #fur2, #fur3, #fur4, #fur5, #fur6, #fur7, #fur8, #fur9, #fur10, #fur11, #fur12, #fur13, #fur14, #fur15, #fur16, #fur17, #fur18, #fur19, #fur20, #fur21, #fur22, #fur23, #fur24, #fur25, #fur26, #fur27, #fur28, #fur29, #fur30, #fur31, #fur32, #fur33, #fur34, #fur35, #fur36, #fur37");
             var larmElement = document.getElementById("larm");
             var rarmElement = document.getElementById("rarm");
             var lfootElement = document.getElementById("lfoot");
@@ -101,7 +105,7 @@
                 this.remove();
                 furCount++;
 
-                if (furCount === 12 && !isLarmMoved) {
+                if (furCount === 37 && !isLarmMoved) {
                     moveLArm();
                     moveRArm();
                     moveLFoot();
@@ -188,14 +192,22 @@
                 rfootElement.style.transform = "rotate(0deg)";
             }
 
-            function showH3() {
+          function showH3() {
                 h3Element.style.opacity = "1";
                 setTimeout(function() {
                     var linkElement1 = document.createElement("a");
-        linkElement1.href = "https://www.youtube.com"; // 첫 번째 주소
-        linkElement1.target = "_blank";
-        linkElement1.textContent = "youtube.com"; // 첫 번째 텍스트
-        linkElement1.style.textAlign = "center";
+       var urlList = [
+      "https://kr.vestiairecollective.com/women-clothing/coats/chanel/multicolour-faux-fur-chanel-coat-28597042.shtml",
+      "https://www.nordstrom.com/s/oversize-faux-fur-reversible-bomber-jacket/7034554?origin=category-personalizedsort&breadcrumb=Home%2FWomen%2FClothing%2FCoats%20%26%20Jackets%2FFur%20%26%20Faux%20Fur&color=240",
+      "https://www.asos.com/urban-bliss/urban-bliss-faux-fur-bomber-jacket-in-black-heart/prd/203260028?colourWayId=203260031&cid=11900"
+      // 다른 주소를 원하는 만큼 추가할 수 있습니다
+    ];
+        var randomIndex = Math.floor(Math.random() * urlList.length);
+    var randomUrl = urlList[randomIndex];
+    linkElement1.href = randomUrl;
+    linkElement1.target = "_blank";
+    linkElement1.textContent = "Here"; // 원하는 텍스트
+    linkElement1.style.textAlign = "center";
         showBubble2();
         h4Element.style.opacity = "1";
         h5Element.style.opacity = "1";
@@ -209,7 +221,6 @@
 
     }, 3000);
             }
-
 
             function hideH3() {
              h3Element.style.opacity = "0";
@@ -277,15 +288,6 @@
     <div id="rfoot"></div>
     <div id="larm"></div>
     <div id="rarm"></div>
-    <div id="face"></div>
-    <div id="lear"></div>
-    <div id="rear"></div>
-    <div id="leye"></div>
-    <div id="reye"></div>
-    <div id="mouth"></div>
-    <div id="noseone"></div>
-    <div id="nosetwo"></div>
-    <div id="nosethree"></div>
     <div id="fur1"></div>
     <div id="fur2"></div>
     <div id="fur3"></div>
@@ -298,6 +300,42 @@
     <div id="fur10"></div>
     <div id="fur11"></div>
     <div id="fur12"></div>
+    <div id="fur13"></div>
+    <div id="fur14"></div>
+    <div id="fur15"></div>
+    <div id="fur16"></div>
+    <div id="fur17"></div>
+    <div id="fur18"></div>
+    <div id="fur19"></div>
+    <div id="fur20"></div>
+    <div id="fur21"></div>
+    <div id="fur22"></div>
+    <div id="fur23"></div>
+    <div id="fur24"></div>
+    <div id="fur25"></div>
+    <div id="fur26"></div>
+    <div id="fur27"></div>
+    <div id="fur28"></div>
+    <div id="fur29"></div>
+    <div id="fur30"></div>
+    <div id="fur31"></div>
+    <div id="fur32"></div>
+    <div id="fur33"></div>
+    <div id="fur34"></div>
+    <div id="fur35"></div>
+    <div id="fur36"></div>
+<div id="fur37"></div>
+    <div id="face"></div>
+    <div id="face2"></div>
+    <div id="face3"></div>
+    <div id="mouth"></div>
+    <div id="triangle1"></div>
+     <div id="triangle2"></div>
+    <div id="lear"></div>
+    <div id="rear"></div>
+    <div id="leye"></div>
+    <div id="reye"></div>
+    <div id="noseone"></div>
     <div id="tri"></div>
     <div id="tear"></div>
     <div id="bubble"></div>
